@@ -101,11 +101,16 @@ jobs:
           gh_pages: gh-pages
           keep_reports: 20
 
-      # checkout 会在目录内留下 .git，它会被一并拷进待发布目录，
-      # 导致发布动作无法在其中新建 gh-pages 分支（src refspec does not match any）
-      - name: 清理待发布目录中的 git 元数据
+      # 两个必要的收尾：
+      # 一是 checkout 在历史目录留下的 .git 会被一并拷进待发布目录，使发布动作
+      # 无法在其中新建 gh-pages 分支，报 src refspec does not match any；
+      # 二是报告由 docker action 以 root 身份生成，需交还属主，否则发布动作
+      # 无权在目录内初始化仓库。
+      - name: 整理待发布目录
         if: always()
-        run: rm -rf allure-history/.git gh-pages/.git
+        run: |
+          sudo rm -rf allure-history/.git gh-pages/.git
+          sudo chown -R "$(id -u):$(id -g)" allure-history
 
       - name: 发布报告到 GitHub Pages
         if: always() && github.ref == 'refs/heads/main'
