@@ -1,0 +1,73 @@
+# 下单接口用例数据
+# 设计依据：边界值（数量 1 / 99 及越界）+ 金额精度 + 库存规则 + 商品不存在
+# 金额用字符串传入，避免浮点在序列化环节先丢精度，这是支付类接口的常见坑
+
+- title: 正常下单单件
+  sku: SKU-001
+  quantity: 1
+  unit_price: "19.99"
+  expect_status: 201
+  expect_amount: 19.99
+
+- title: 正常下单多件金额需正确累计
+  sku: SKU-001
+  quantity: 3
+  unit_price: "19.99"
+  expect_status: 201
+  expect_amount: 59.97
+
+- title: 数量下边界1
+  sku: SKU-001
+  quantity: 1
+  unit_price: "0.01"
+  expect_status: 201
+  expect_amount: 0.01
+
+- title: 金额需按四舍五入保留两位小数
+  sku: SKU-001
+  quantity: 3
+  unit_price: "0.005"
+  expect_status: 201
+  expect_amount: 0.02
+
+- title: 数量为0不合法
+  sku: SKU-001
+  quantity: 0
+  unit_price: "19.99"
+  expect_status: 422
+  expect_amount: null
+
+- title: 数量为负数不合法
+  sku: SKU-001
+  quantity: -1
+  unit_price: "19.99"
+  expect_status: 422
+  expect_amount: null
+
+- title: 数量超过上限99
+  sku: SKU-001
+  quantity: 100
+  unit_price: "19.99"
+  expect_status: 422
+  expect_amount: null
+
+- title: 单价为0不合法
+  sku: SKU-001
+  quantity: 1
+  unit_price: "0"
+  expect_status: 422
+  expect_amount: null
+
+- title: 商品不存在
+  sku: SKU-NOT-EXIST
+  quantity: 1
+  unit_price: "19.99"
+  expect_status: 404
+  expect_amount: null
+
+- title: 库存为0时下单应被拒绝
+  sku: SKU-002
+  quantity: 1
+  unit_price: "19.99"
+  expect_status: 409
+  expect_amount: null

@@ -1,0 +1,33 @@
+# 多环境配置：通过 pytest --env=xxx 或 python run.py --env xxx 切换
+# 用例代码里不允许出现任何硬编码的 URL 与账号
+
+default_env: local
+
+envs:
+  local:
+    base_url: "http://127.0.0.1:8000"
+    api_prefix: "/api/v1"
+    timeout: 10
+    auto_start_mock: true        # 本地环境自动拉起被测服务
+    account:
+      username: "admin"
+      password: "123456"
+    account_b:                   # 用于水平越权测试的第二个账号
+      username: "user_b"
+      password: "123456"
+    thresholds:
+      response_time_ms: 1000
+
+  test:
+    base_url: "http://127.0.0.1:8000"
+    api_prefix: "/api/v1"
+    timeout: 15
+    auto_start_mock: false       # 测试环境由 CI 或运维部署，框架不负责启动
+    account:
+      username: "admin"
+      password: "123456"
+    account_b:
+      username: "user_b"
+      password: "123456"
+    thresholds:
+      response_time_ms: 2000

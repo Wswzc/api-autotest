@@ -1,0 +1,12 @@
+pytest==8.2.0
+requests==2.32.3
+PyYAML==6.0.1
+allure-pytest==2.13.5
+pytest-xdist==3.6.1
+pytest-rerunfailures==14.0
+jsonpath-ng==1.6.1
+loguru==0.7.2
+
+# 内置 Mock Server（被测对象），使框架可离线运行
+fastapi==0.111.0
+uvicorn==0.30.1

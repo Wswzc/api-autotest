@@ -1,0 +1,75 @@
+# 登录接口用例数据
+# 设计依据：等价类划分 + 边界值 + 错误推测（特殊字符 / 注入）
+# 安全约定：账号不存在与密码错误必须返回同一提示，避免账号枚举
+
+- title: 正确账号密码登录成功
+  username: admin
+  password: "123456"
+  expect_status: 200
+  expect_code: 0
+
+- title: 密码错误登录失败
+  username: admin
+  password: wrong_password
+  expect_status: 401
+  expect_code: 1001
+
+- title: 账号不存在返回与密码错误一致的提示
+  username: no_such_user_xyz
+  password: "123456"
+  expect_status: 401
+  expect_code: 1001
+
+- title: 用户名为空
+  username: ""
+  password: "123456"
+  expect_status: 400
+  expect_code: 1002
+
+- title: 用户名为纯空格
+  username: "   "
+  password: "123456"
+  expect_status: 400
+  expect_code: 1002
+
+- title: 密码为空
+  username: admin
+  password: ""
+  expect_status: 400
+  expect_code: 1003
+
+- title: 用户名大小写敏感
+  username: ADMIN
+  password: "123456"
+  expect_status: 401
+  expect_code: 1001
+
+- title: 用户名前后带空格不被自动修正
+  username: " admin "
+  password: "123456"
+  expect_status: 401
+  expect_code: 1001
+
+- title: 用户名超长255字符
+  username: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  password: "123456"
+  expect_status: 401
+  expect_code: 1001
+
+- title: SQL注入字符不应绕过鉴权
+  username: "' OR 1=1 --"
+  password: "anything"
+  expect_status: 401
+  expect_code: 1001
+
+- title: XSS脚本作为用户名不应通过
+  username: "<script>alert(1)</script>"
+  password: "123456"
+  expect_status: 401
+  expect_code: 1001
+
+- title: 用户名为中文
+  username: "管理员"
+  password: "123456"
+  expect_status: 401
+  expect_code: 1001

@@ -1,0 +1,51 @@
+# 创建用户的参数校验用例
+# 设计依据：边界值分析（长度上下界及其 ±1）+ 类型错误 + 必填缺失 + 格式非法
+# 说明：框架层参数校验不通过时服务返回 422，业务规则冲突返回 409
+
+- title: 用户名少于3位_下边界减一
+  payload: { username: "ab", password: "Passw0rd123", email: "a1@example.com" }
+  expect_status: 422
+
+- title: 用户名等于3位_下边界
+  payload: { username: "abc", password: "Passw0rd123", email: "a2@example.com" }
+  expect_status: 201
+
+- title: 用户名等于32位_上边界
+  payload: { username: "abcdefghijabcdefghijabcdefghijab", password: "Passw0rd123", email: "a3@example.com" }
+  expect_status: 201
+
+- title: 用户名超过32位_上边界加一
+  payload: { username: "abcdefghijabcdefghijabcdefghijabc", password: "Passw0rd123", email: "a4@example.com" }
+  expect_status: 422
+
+- title: 密码少于8位
+  payload: { username: "pwd_short", password: "Pass1", email: "a5@example.com" }
+  expect_status: 422
+
+- title: 密码超过16位
+  payload: { username: "pwd_long", password: "Passw0rd123456789", email: "a6@example.com" }
+  expect_status: 422
+
+- title: 邮箱格式非法
+  payload: { username: "bad_email", password: "Passw0rd123", email: "not-an-email" }
+  expect_status: 422
+
+- title: 缺少必填字段email
+  payload: { username: "no_email", password: "Passw0rd123" }
+  expect_status: 422
+
+- title: 缺少必填字段password
+  payload: { username: "no_pwd", email: "a7@example.com" }
+  expect_status: 422
+
+- title: 年龄为负数
+  payload: { username: "age_neg", password: "Passw0rd123", email: "a8@example.com", age: -1 }
+  expect_status: 422
+
+- title: 年龄超过上限150
+  payload: { username: "age_max", password: "Passw0rd123", email: "a9@example.com", age: 151 }
+  expect_status: 422
+
+- title: 年龄传字符串类型错误
+  payload: { username: "age_str", password: "Passw0rd123", email: "a10@example.com", age: "twenty" }
+  expect_status: 422
