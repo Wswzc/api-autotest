@@ -1,0 +1,12 @@
+15:01:28 | INFO    | ┌── 开始 test_order_with_exact_stock
+15:01:28 | INFO    | → POST http://127.0.0.1:8000/api/v1/stock
+15:01:28 | INFO    | ← 200 4ms
+15:01:28 | INFO    | → POST http://127.0.0.1:8000/api/v1/stock
+15:01:28 | INFO    | ← 200 2ms
+15:01:28 | INFO    | → POST http://127.0.0.1:8000/api/v1/orders
+15:01:28 | INFO    | ← 201 2ms
+15:01:28 | INFO    | → GET http://127.0.0.1:8000/api/v1/stock/SKU-AUTO-1785337288075345
+15:01:28 | INFO    | ← 200 2ms
+15:01:28 | INFO    | → POST http://127.0.0.1:8000/api/v1/orders
+15:01:28 | INFO    | ← 409 2ms
+15:01:28 | INFO    | └── 结束 test_order_with_exact_stock

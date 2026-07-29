@@ -1,0 +1,8 @@
+15:01:28 | INFO    | ┌── 开始 test_duplicate_email
+15:01:28 | INFO    | → POST http://127.0.0.1:8000/api/v1/users
+15:01:28 | INFO    | ← 201 5ms
+15:01:28 | INFO    | → POST http://127.0.0.1:8000/api/v1/users
+15:01:28 | INFO    | ← 409 4ms
+15:01:28 | INFO    | → DELETE http://127.0.0.1:8000/api/v1/users/14
+15:01:28 | INFO    | ← 200 2ms
+15:01:28 | INFO    | └── 结束 test_duplicate_email
