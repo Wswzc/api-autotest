@@ -1,7 +1,12 @@
 # 接口自动化测试框架
 
+[![API Automation](https://github.com/Wswzc/api-autotest/actions/workflows/ci.yml/badge.svg)](https://github.com/Wswzc/api-autotest/actions/workflows/ci.yml)
+[![Allure Report](https://img.shields.io/badge/Allure-在线报告-brightgreen)](https://wswzc.github.io/api-autotest/)
+
 基于 **pytest + requests** 的分层接口自动化框架，覆盖多环境配置、yaml 数据驱动、
 分层断言、并行执行、Allure 报告与 GitHub Actions 每日定时回归。
+
+每次提交自动执行，最新一轮的完整执行报告见 <https://wswzc.github.io/api-autotest/>。
 
 仓库自带一个用 FastAPI 实现的被测服务，因此 clone 下来**一条命令即可跑通全部用例**，
 不依赖任何外部环境。
