@@ -1,0 +1,8 @@
+02:53:13 | INFO    | ┌── 开始 test_update_to_duplicate_email
+02:53:13 | INFO    | → POST http://127.0.0.1:8000/api/v1/users
+02:53:13 | INFO    | ← 201 5ms
+02:53:13 | INFO    | → PUT http://127.0.0.1:8000/api/v1/users/15
+02:53:13 | INFO    | ← 409 3ms
+02:53:13 | INFO    | → DELETE http://127.0.0.1:8000/api/v1/users/15
+02:53:13 | INFO    | ← 200 2ms
+02:53:13 | INFO    | └── 结束 test_update_to_duplicate_email
