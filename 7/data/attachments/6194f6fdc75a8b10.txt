@@ -1,0 +1,36 @@
+GET http://127.0.0.1:8000/api/v1/users
+请求头: {"User-Agent": "python-requests/2.32.3", "Accept-Encoding": "gzip, deflate", "Accept": "*/*", "Connection": "keep-alive", "Authorization": "Bearer ***"}
+查询参数: {'page': 1, 'size': 10}
+请求体: 无
+------------------------------------------------------------
+状态码: 200    耗时: 2ms
+响应体:
+{
+  "code": 0,
+  "msg": "success",
+  "data": {
+    "total": 2,
+    "page": 1,
+    "size": 10,
+    "items": [
+      {
+        "id": 1,
+        "username": "admin",
+        "email": "admin@test.com",
+        "age": null,
+        "role": "admin",
+        "status": 1,
+        "created_at": 1785526140
+      },
+      {
+        "id": 2,
+        "username": "user_b",
+        "email": "userb@test.com",
+        "age": null,
+        "role": "user",
+        "status": 1,
+        "created_at": 1785526140
+      }
+    ]
+  }
+}

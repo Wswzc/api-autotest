@@ -1,0 +1,18 @@
+POST http://127.0.0.1:8000/api/v1/stock
+请求头: {"User-Agent": "python-requests/2.32.3", "Accept-Encoding": "gzip, deflate", "Accept": "*/*", "Connection": "keep-alive", "Authorization": "Bearer ***"}
+查询参数: None
+请求体: {
+  "sku": "SKU-AUTO-1785526142287973",
+  "stock": 50
+}
+------------------------------------------------------------
+状态码: 200    耗时: 2ms
+响应体:
+{
+  "code": 0,
+  "msg": "success",
+  "data": {
+    "sku": "SKU-AUTO-1785526142287973",
+    "stock": 50
+  }
+}
