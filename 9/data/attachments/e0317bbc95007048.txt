@@ -1,0 +1,20 @@
+GET http://127.0.0.1:8000/api/v1/users/13
+请求头: {"User-Agent": "python-requests/2.32.3", "Accept-Encoding": "gzip, deflate", "Accept": "*/*", "Connection": "keep-alive", "Authorization": "Bearer ***"}
+查询参数: None
+请求体: 无
+------------------------------------------------------------
+状态码: 200    耗时: 2ms
+响应体:
+{
+  "code": 0,
+  "msg": "success",
+  "data": {
+    "id": 13,
+    "username": "auto_1785698020943191",
+    "email": "updated_1785698020958877@example.com",
+    "age": 30,
+    "role": "user",
+    "status": 1,
+    "created_at": 1785698020
+  }
+}
