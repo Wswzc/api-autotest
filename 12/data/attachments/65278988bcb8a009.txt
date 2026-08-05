@@ -1,0 +1,10 @@
+19:38:11 | INFO    | ┌── 开始 test_token_invalid_after_logout
+19:38:11 | INFO    | → POST http://127.0.0.1:8000/api/v1/login
+19:38:11 | INFO    | ← 200 2ms
+19:38:11 | INFO    | → GET http://127.0.0.1:8000/api/v1/users
+19:38:11 | INFO    | ← 200 4ms
+19:38:11 | INFO    | → POST http://127.0.0.1:8000/api/v1/logout
+19:38:11 | INFO    | ← 200 5ms
+19:38:11 | INFO    | → GET http://127.0.0.1:8000/api/v1/users
+19:38:11 | INFO    | ← 401 4ms
+19:38:11 | INFO    | └── 结束 test_token_invalid_after_logout
