@@ -1,0 +1,9 @@
+00:04:38 | INFO    | → POST http://127.0.0.1:8000/api/v1/login
+00:04:38 | INFO    | ← 200 5ms
+00:04:38 | INFO    | 主 账号登录成功，token 已缓存至会话级
+00:04:38 | INFO    | ┌── 开始 test_create_order[\u6b63\u5e38\u4e0b\u5355\u5355\u4ef6]
+00:04:38 | INFO    | → POST http://127.0.0.1:8000/api/v1/orders
+00:04:38 | INFO    | ← 201 5ms
+00:04:38 | INFO    | → POST http://127.0.0.1:8000/api/v1/orders/NO17860610780006/cancel
+00:04:38 | INFO    | ← 200 3ms
+00:04:38 | INFO    | └── 结束 test_create_order[\u6b63\u5e38\u4e0b\u5355\u5355\u4ef6]

@@ -1,0 +1,25 @@
+POST http://127.0.0.1:8000/api/v1/orders
+请求头: {"User-Agent": "python-requests/2.32.3", "Accept-Encoding": "gzip, deflate", "Accept": "*/*", "Connection": "keep-alive", "Authorization": "Bearer ***"}
+查询参数: None
+请求体: {
+  "sku": "SKU-AUTO-1786061079137588",
+  "quantity": 1,
+  "unit_price": "19.99"
+}
+------------------------------------------------------------
+状态码: 201    耗时: 6ms
+响应体:
+{
+  "code": 0,
+  "msg": "success",
+  "data": {
+    "order_no": "NO17860610790017",
+    "user_id": 1,
+    "sku": "SKU-AUTO-1786061079137588",
+    "quantity": 1,
+    "unit_price": 19.99,
+    "amount": 19.99,
+    "status": "pending",
+    "created_at": 1786061079
+  }
+}

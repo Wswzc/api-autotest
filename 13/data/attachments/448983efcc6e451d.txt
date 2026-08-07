@@ -1,0 +1,12 @@
+00:04:38 | INFO    | ┌── 开始 test_legal_transition_pay_then_finish
+00:04:38 | INFO    | → POST http://127.0.0.1:8000/api/v1/orders
+00:04:38 | INFO    | ← 201 5ms
+00:04:38 | INFO    | → POST http://127.0.0.1:8000/api/v1/orders/NO17860610780010/pay
+00:04:38 | INFO    | ← 200 2ms
+00:04:38 | INFO    | → POST http://127.0.0.1:8000/api/v1/orders/NO17860610780010/finish
+00:04:38 | INFO    | ← 200 3ms
+00:04:38 | INFO    | → GET http://127.0.0.1:8000/api/v1/orders/NO17860610780010
+00:04:38 | INFO    | ← 200 2ms
+00:04:38 | INFO    | → GET http://127.0.0.1:8000/api/v1/orders/NO17860610780010
+00:04:38 | INFO    | ← 200 3ms
+00:04:38 | INFO    | └── 结束 test_legal_transition_pay_then_finish
