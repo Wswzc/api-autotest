@@ -1,0 +1,10 @@
+18:40:08 | INFO    | ┌── 开始 test_account_lock_after_repeated_failures
+18:40:08 | INFO    | → POST http://127.0.0.1:8000/api/v1/login
+18:40:08 | INFO    | ← 401 3ms
+18:40:08 | INFO    | → POST http://127.0.0.1:8000/api/v1/login
+18:40:08 | INFO    | ← 401 2ms
+18:40:08 | INFO    | → POST http://127.0.0.1:8000/api/v1/login
+18:40:08 | INFO    | ← 401 1ms
+18:40:08 | INFO    | → POST http://127.0.0.1:8000/api/v1/login
+18:40:08 | INFO    | ← 423 2ms
+18:40:08 | INFO    | └── 结束 test_account_lock_after_repeated_failures
