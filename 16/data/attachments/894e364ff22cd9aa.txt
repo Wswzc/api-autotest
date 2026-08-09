@@ -1,0 +1,17 @@
+POST http://127.0.0.1:8000/api/v1/users
+请求头: {"User-Agent": "python-requests/2.32.3", "Accept-Encoding": "gzip, deflate", "Accept": "*/*", "Connection": "keep-alive", "Authorization": "Bearer ***"}
+查询参数: None
+请求体: {
+  "username": "auto_1786301001299960",
+  "password": "Aa1fNYL4sRco",
+  "email": "auto_1786301001322181@example.com",
+  "age": 39
+}
+------------------------------------------------------------
+状态码: 409    耗时: 2ms
+响应体:
+{
+  "code": 2001,
+  "msg": "用户名已存在",
+  "data": null
+}
