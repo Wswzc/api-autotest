@@ -1,0 +1,153 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","3","test_protected_endpoints_require_auth[GET-/stock/SKU-001]","testcases","2026-08-11","passed","2026-08-11","TestAuthentication","test_security","",""
+"","3","test_invalid_token_rejected[\u7f3a\u5c11\u65b9\u6848\u524d\u7f00]","testcases","2026-08-11","passed","2026-08-11","TestAuthentication","test_security","",""
+"","40","test_delete_user","testcases","2026-08-11","passed","2026-08-11","TestUserCrud","test_user_crud","",""
+"合法数据的用例会真的建出用户，因此给唯一字段加随机后缀并在断言后清理","4","test_create_validation[\u7528\u6237\u540d\u5c11\u4e8e3\u4f4d_\u4e0b\u8fb9\u754c\u51cf\u4e00]","testcases","2026-08-11","passed","2026-08-11","TestUserCrud","test_user_crud","",""
+"","4","test_create_order[\u6570\u91cf\u4e3a0\u4e0d\u5408\u6cd5]","testcases","2026-08-11","passed","2026-08-11","TestOrderCreate","test_order","",""
+"","88","test_legal_transition_pay_then_finish","testcases","2026-08-11","passed","2026-08-11","TestOrderStateMachine","test_order","",""
+"核心断言是""绝不能返回 5xx""
+
+        注入类输入的正确表现是被参数校验或唯一约束拦下（4xx），
+        一旦出现 500 说明输入直达了底层，是明确的安全信号。
+        ","4","test_malicious_username_no_500[\u8f93\u5165_0]","testcases","2026-08-11","passed","2026-08-11","TestMaliciousInput","test_security","",""
+"","4","test_path_injection_no_500[\u7a7a\u5b57\u8282]","testcases","2026-08-11","passed","2026-08-11","TestMaliciousInput","test_security","",""
+"","103","test_create_order[\u91d1\u989d\u9700\u6309\u56db\u820d\u4e94\u5165\u4fdd\u7559\u4e24\u4f4d\u5c0f\u6570]","testcases","2026-08-11","passed","2026-08-11","TestOrderCreate","test_order","",""
+"","4","test_protected_endpoints_require_auth[POST-/users]","testcases","2026-08-11","passed","2026-08-11","TestAuthentication","test_security","",""
+"","5","test_protected_endpoints_require_auth[GET-/orders/NO123]","testcases","2026-08-11","passed","2026-08-11","TestAuthentication","test_security","",""
+"","4","test_login[\u5bc6\u7801\u4e3a\u7a7a]","testcases","2026-08-11","passed","2026-08-11","TestLogin","test_login","",""
+"","3","test_invalid_token_rejected[\u5c0f\u5199\u65b9\u6848\u524d\u7f00]","testcases","2026-08-11","passed","2026-08-11","TestAuthentication","test_security","",""
+"合法数据的用例会真的建出用户，因此给唯一字段加随机后缀并在断言后清理","7","test_create_validation[\u90ae\u7bb1\u683c\u5f0f\u975e\u6cd5]","testcases","2026-08-11","passed","2026-08-11","TestUserCrud","test_user_crud","",""
+"","10","test_operate_nonexistent_order","testcases","2026-08-11","passed","2026-08-11","TestOrderStateMachine","test_order","",""
+"","4","test_horizontal_privilege_write","testcases","2026-08-11","passed","2026-08-11","TestAuthorization","test_security","",""
+"","7","test_pagination_boundary[\u6bcf\u98750\u6761\u975e\u6cd5]","testcases","2026-08-11","passed","2026-08-11","TestUserCrud","test_user_crud","",""
+"","29","test_legal_transition_cancel","testcases","2026-08-11","passed","2026-08-11","TestOrderStateMachine","test_order","",""
+"","6","test_create_order[\u5e93\u5b58\u4e3a0\u65f6\u4e0b\u5355\u5e94\u88ab\u62d2\u7edd]","testcases","2026-08-11","passed","2026-08-11","TestOrderCreate","test_order","",""
+"核心断言是""绝不能返回 5xx""
+
+        注入类输入的正确表现是被参数校验或唯一约束拦下（4xx），
+        一旦出现 500 说明输入直达了底层，是明确的安全信号。
+        ","61","test_malicious_username_no_500[\u8f93\u5165_7]","testcases","2026-08-11","passed","2026-08-11","TestMaliciousInput","test_security","",""
+"幂等的核心是""重复提交不产生副作用""，所以除了订单号一致，
+        还必须验证库存只被扣减了一次——只断言订单号会漏掉重复扣减这类缺陷。
+        ","117","test_same_key_creates_single_order","testcases","2026-08-11","passed","2026-08-11","TestOrderIdempotency","test_order","",""
+"核心断言是""绝不能返回 5xx""
+
+        注入类输入的正确表现是被参数校验或唯一约束拦下（4xx），
+        一旦出现 500 说明输入直达了底层，是明确的安全信号。
+        ","7","test_malicious_username_no_500[\u8f93\u5165_1]","testcases","2026-08-11","passed","2026-08-11","TestMaliciousInput","test_security","",""
+"","52","test_pagination_boundary[\u5355\u9875\u4e0a\u9650100]","testcases","2026-08-11","passed","2026-08-11","TestUserCrud","test_user_crud","",""
+"用专属 SKU 而不是共享的 SKU-001
+
+        库存是共享资源，用共享 SKU 做精确差值断言在并行执行时会被其他 worker
+        的下单动作干扰，导致用例随机失败。资源隔离是这类用例唯一可靠的写法。
+        ","106","test_stock_deducted_after_order","testcases","2026-08-11","passed","2026-08-11","TestOrderCreate","test_order","",""
+"","4","test_pagination_boundary[\u9875\u7801\u4e3a0\u975e\u6cd5]","testcases","2026-08-11","passed","2026-08-11","TestUserCrud","test_user_crud","",""
+"","21","test_login[\u7528\u6237\u540d\u4e3a\u7eaf\u7a7a\u683c]","testcases","2026-08-11","passed","2026-08-11","TestLogin","test_login","",""
+"","5","test_login[\u7528\u6237\u540d\u5927\u5c0f\u5199\u654f\u611f]","testcases","2026-08-11","passed","2026-08-11","TestLogin","test_login","",""
+"核心断言是""绝不能返回 5xx""
+
+        注入类输入的正确表现是被参数校验或唯一约束拦下（4xx），
+        一旦出现 500 说明输入直达了底层，是明确的安全信号。
+        ","67","test_malicious_username_no_500[\u8f93\u5165_4]","testcases","2026-08-11","passed","2026-08-11","TestMaliciousInput","test_security","",""
+"","6","test_duplicate_email","testcases","2026-08-11","passed","2026-08-11","TestUserCrud","test_user_crud","",""
+"库存边界：刚好够 → 成功；已归零 → 拒绝","41","test_order_with_exact_stock","testcases","2026-08-11","passed","2026-08-11","TestOrderCreate","test_order","",""
+"","6","test_login[\u8d26\u53f7\u4e0d\u5b58\u5728\u8fd4\u56de\u4e0e\u5bc6\u7801\u9519\u8bef\u4e00\u81f4\u7684\u63d0\u793a]","testcases","2026-08-11","passed","2026-08-11","TestLogin","test_login","",""
+"","54","test_different_keys_create_different_orders","testcases","2026-08-11","passed","2026-08-11","TestOrderIdempotency","test_order","",""
+"","5","test_login[\u6b63\u786e\u8d26\u53f7\u5bc6\u7801\u767b\u5f55\u6210\u529f]","testcases","2026-08-11","passed","2026-08-11","TestLogin","test_login","",""
+"","4","test_login[\u7528\u6237\u540d\u524d\u540e\u5e26\u7a7a\u683c\u4e0d\u88ab\u81ea\u52a8\u4fee\u6b63]","testcases","2026-08-11","passed","2026-08-11","TestLogin","test_login","",""
+"核心断言是""绝不能返回 5xx""
+
+        注入类输入的正确表现是被参数校验或唯一约束拦下（4xx），
+        一旦出现 500 说明输入直达了底层，是明确的安全信号。
+        ","61","test_malicious_username_no_500[\u8f93\u5165_6]","testcases","2026-08-11","passed","2026-08-11","TestMaliciousInput","test_security","",""
+"","5","test_update_to_duplicate_email","testcases","2026-08-11","passed","2026-08-11","TestUserCrud","test_user_crud","",""
+"","3","test_invalid_token_rejected[\u9519\u8bef\u8ba4\u8bc1\u65b9\u6848]","testcases","2026-08-11","passed","2026-08-11","TestAuthentication","test_security","",""
+"","6","test_create_order[\u5546\u54c1\u4e0d\u5b58\u5728]","testcases","2026-08-11","passed","2026-08-11","TestOrderCreate","test_order","",""
+"核心断言是""绝不能返回 5xx""
+
+        注入类输入的正确表现是被参数校验或唯一约束拦下（4xx），
+        一旦出现 500 说明输入直达了底层，是明确的安全信号。
+        ","62","test_malicious_username_no_500[\u8f93\u5165_9]","testcases","2026-08-11","passed","2026-08-11","TestMaliciousInput","test_security","",""
+"合法数据的用例会真的建出用户，因此给唯一字段加随机后缀并在断言后清理","5","test_create_validation[\u7f3a\u5c11\u5fc5\u586b\u5b57\u6bb5password]","testcases","2026-08-11","passed","2026-08-11","TestUserCrud","test_user_crud","",""
+"","7","test_create_order[\u5355\u4ef7\u4e3a0\u4e0d\u5408\u6cd5]","testcases","2026-08-11","passed","2026-08-11","TestOrderCreate","test_order","",""
+"合法数据的用例会真的建出用户，因此给唯一字段加随机后缀并在断言后清理","7","test_create_validation[\u5e74\u9f84\u4f20\u5b57\u7b26\u4e32\u7c7b\u578b\u9519\u8bef]","testcases","2026-08-11","passed","2026-08-11","TestUserCrud","test_user_crud","",""
+"核心断言是""绝不能返回 5xx""
+
+        注入类输入的正确表现是被参数校验或唯一约束拦下（4xx），
+        一旦出现 500 说明输入直达了底层，是明确的安全信号。
+        ","59","test_malicious_username_no_500[\u8f93\u5165_8]","testcases","2026-08-11","passed","2026-08-11","TestMaliciousInput","test_security","",""
+"","41","test_vertical_privilege","testcases","2026-08-11","passed","2026-08-11","TestAuthorization","test_security","",""
+"","3","test_no_sensitive_field_in_list","testcases","2026-08-11","passed","2026-08-11","TestMaliciousInput","test_security","",""
+"","5","test_duplicate_username","testcases","2026-08-11","passed","2026-08-11","TestUserCrud","test_user_crud","",""
+"","4","test_protected_endpoints_require_auth[PUT-/users/1]","testcases","2026-08-11","passed","2026-08-11","TestAuthentication","test_security","",""
+"","111","test_create_order[\u6b63\u5e38\u4e0b\u5355\u5355\u4ef6]","testcases","2026-08-11","passed","2026-08-11","TestOrderCreate","test_order","",""
+"","4","test_protected_endpoints_require_auth[POST-/orders]","testcases","2026-08-11","passed","2026-08-11","TestAuthentication","test_security","",""
+"","10","test_login[\u5bc6\u7801\u9519\u8bef\u767b\u5f55\u5931\u8d25]","testcases","2026-08-11","passed","2026-08-11","TestLogin","test_login","",""
+"","5","test_get_nonexistent_user","testcases","2026-08-11","passed","2026-08-11","TestUserCrud","test_user_crud","",""
+"用随机用户名做锁定测试，避免锁掉公共账号影响其他用例
+
+        锁定计数按用户名维度累计，不存在的用户名同样能验证这条规则，
+        这样既覆盖了业务逻辑，又不会污染共享数据。
+        ","15","test_account_lock_after_repeated_failures","testcases","2026-08-11","passed","2026-08-11","TestLogin","test_login","",""
+"","21","test_login[\u7528\u6237\u540d\u4e3a\u4e2d\u6587]","testcases","2026-08-11","passed","2026-08-11","TestLogin","test_login","",""
+"","6","test_cannot_read_others_order","testcases","2026-08-11","passed","2026-08-11","TestAuthorization","test_security","",""
+"","4","test_illegal_finish_without_pay","testcases","2026-08-11","passed","2026-08-11","TestOrderStateMachine","test_order","",""
+"","5","test_create_order_requires_auth","testcases","2026-08-11","passed","2026-08-11","TestOrderCreate","test_order","",""
+"合法数据的用例会真的建出用户，因此给唯一字段加随机后缀并在断言后清理","5","test_create_validation[\u5bc6\u7801\u8d85\u8fc716\u4f4d]","testcases","2026-08-11","passed","2026-08-11","TestUserCrud","test_user_crud","",""
+"","4","test_login[XSS\u811a\u672c\u4f5c\u4e3a\u7528\u6237\u540d\u4e0d\u5e94\u901a\u8fc7]","testcases","2026-08-11","passed","2026-08-11","TestLogin","test_login","",""
+"","5","test_protected_endpoints_require_auth[GET-/users]","testcases","2026-08-11","passed","2026-08-11","TestAuthentication","test_security","",""
+"合法数据的用例会真的建出用户，因此给唯一字段加随机后缀并在断言后清理","5","test_create_validation[\u5e74\u9f84\u8d85\u8fc7\u4e0a\u9650150]","testcases","2026-08-11","passed","2026-08-11","TestUserCrud","test_user_crud","",""
+"","103","test_create_order[\u6b63\u5e38\u4e0b\u5355\u591a\u4ef6\u91d1\u989d\u9700\u6b63\u786e\u7d2f\u8ba1]","testcases","2026-08-11","passed","2026-08-11","TestOrderCreate","test_order","",""
+"用 B 账号的 token 访问 admin（uid=1）的资料，必须被拒绝
+
+        这类缺陷在 UI 上通常发现不了，因为前端根本不会渲染这个入口。
+        ","4","test_horizontal_privilege_read","testcases","2026-08-11","passed","2026-08-11","TestAuthorization","test_security","",""
+"合法数据的用例会真的建出用户，因此给唯一字段加随机后缀并在断言后清理","4","test_create_validation[\u7f3a\u5c11\u5fc5\u586b\u5b57\u6bb5email]","testcases","2026-08-11","passed","2026-08-11","TestUserCrud","test_user_crud","",""
+"","3","test_invalid_token_rejected[\u7a7atoken]","testcases","2026-08-11","passed","2026-08-11","TestAuthentication","test_security","",""
+"","4","test_protected_endpoints_require_auth[GET-/users/1]","testcases","2026-08-11","passed","2026-08-11","TestAuthentication","test_security","",""
+"","5","test_login[SQL\u6ce8\u5165\u5b57\u7b26\u4e0d\u5e94\u7ed5\u8fc7\u9274\u6743]","testcases","2026-08-11","passed","2026-08-11","TestLogin","test_login","",""
+"","4","test_login_no_password_leak","testcases","2026-08-11","passed","2026-08-11","TestLogin","test_login","",""
+"","6","test_invalid_token_rejected[\u4f2a\u9020token]","testcases","2026-08-11","passed","2026-08-11","TestAuthentication","test_security","",""
+"合法数据的用例会真的建出用户，因此给唯一字段加随机后缀并在断言后清理","34","test_create_validation[\u7528\u6237\u540d\u7b49\u4e8e3\u4f4d_\u4e0b\u8fb9\u754c]","testcases","2026-08-11","passed","2026-08-11","TestUserCrud","test_user_crud","",""
+"核心断言是""绝不能返回 5xx""
+
+        注入类输入的正确表现是被参数校验或唯一约束拦下（4xx），
+        一旦出现 500 说明输入直达了底层，是明确的安全信号。
+        ","64","test_malicious_username_no_500[\u8f93\u5165_5]","testcases","2026-08-11","passed","2026-08-11","TestMaliciousInput","test_security","",""
+"合法数据的用例会真的建出用户，因此给唯一字段加随机后缀并在断言后清理","5","test_create_validation[\u5bc6\u7801\u5c11\u4e8e8\u4f4d]","testcases","2026-08-11","passed","2026-08-11","TestUserCrud","test_user_crud","",""
+"","17","test_pagination_out_of_range","testcases","2026-08-11","passed","2026-08-11","TestUserCrud","test_user_crud","",""
+"","3","test_path_injection_no_500[\u8def\u5f84\u7a7f\u8d8a]","testcases","2026-08-11","passed","2026-08-11","TestMaliciousInput","test_security","",""
+"","3","test_path_injection_no_500[SQL\u6ce8\u5165]","testcases","2026-08-11","passed","2026-08-11","TestMaliciousInput","test_security","",""
+"","4","test_path_injection_no_500[\u62fc\u63a5\u5220\u8868]","testcases","2026-08-11","passed","2026-08-11","TestMaliciousInput","test_security","",""
+"","37","test_cannot_operate_others_order","testcases","2026-08-11","passed","2026-08-11","TestAuthorization","test_security","",""
+"合法数据的用例会真的建出用户，因此给唯一字段加随机后缀并在断言后清理","4","test_create_validation[\u5e74\u9f84\u4e3a\u8d1f\u6570]","testcases","2026-08-11","passed","2026-08-11","TestUserCrud","test_user_crud","",""
+"","105","test_create_order[\u6570\u91cf\u4e0b\u8fb9\u754c1]","testcases","2026-08-11","passed","2026-08-11","TestOrderCreate","test_order","",""
+"","7","test_get_user_with_invalid_id_type","testcases","2026-08-11","passed","2026-08-11","TestUserCrud","test_user_crud","",""
+"","8","test_illegal_pay_twice","testcases","2026-08-11","passed","2026-08-11","TestOrderStateMachine","test_order","",""
+"","5","test_pagination_boundary[\u6bcf\u9875\u8d85\u4e0a\u9650\u975e\u6cd5]","testcases","2026-08-11","passed","2026-08-11","TestUserCrud","test_user_crud","",""
+"","4","test_login[\u7528\u6237\u540d\u8d85\u957f255\u5b57\u7b26]","testcases","2026-08-11","passed","2026-08-11","TestLogin","test_login","",""
+"","4","test_protected_endpoints_require_auth[DELETE-/users/1]","testcases","2026-08-11","passed","2026-08-11","TestAuthentication","test_security","",""
+"","144","test_create_then_query","testcases","2026-08-11","passed","2026-08-11","TestUserCrud","test_user_crud","",""
+"","4","test_invalid_token_rejected[\u7a7a\u8bf7\u6c42\u5934]","testcases","2026-08-11","passed","2026-08-11","TestAuthentication","test_security","",""
+"","126","test_login_response_schema","testcases","2026-08-11","passed","2026-08-11","TestLogin","test_login","",""
+"","70","test_update_user","testcases","2026-08-11","passed","2026-08-11","TestUserCrud","test_user_crud","",""
+"合法数据的用例会真的建出用户，因此给唯一字段加随机后缀并在断言后清理","7","test_create_validation[\u7528\u6237\u540d\u8d85\u8fc732\u4f4d_\u4e0a\u8fb9\u754c\u52a0\u4e00]","testcases","2026-08-11","passed","2026-08-11","TestUserCrud","test_user_crud","",""
+"","7","test_pagination_boundary[\u9875\u7801\u4e3a\u8d1f\u975e\u6cd5]","testcases","2026-08-11","passed","2026-08-11","TestUserCrud","test_user_crud","",""
+"核心断言是""绝不能返回 5xx""
+
+        注入类输入的正确表现是被参数校验或唯一约束拦下（4xx），
+        一旦出现 500 说明输入直达了底层，是明确的安全信号。
+        ","3","test_malicious_username_no_500[\u8f93\u5165_2]","testcases","2026-08-11","passed","2026-08-11","TestMaliciousInput","test_security","",""
+"","5","test_create_order[\u6570\u91cf\u4e3a\u8d1f\u6570\u4e0d\u5408\u6cd5]","testcases","2026-08-11","passed","2026-08-11","TestOrderCreate","test_order","",""
+"","6","test_create_order[\u6570\u91cf\u8d85\u8fc7\u4e0a\u965099]","testcases","2026-08-11","passed","2026-08-11","TestOrderCreate","test_order","",""
+"","44","test_pagination_boundary[\u9996\u98751\u6761]","testcases","2026-08-11","passed","2026-08-11","TestUserCrud","test_user_crud","",""
+"","7","test_illegal_pay_after_cancelled","testcases","2026-08-11","passed","2026-08-11","TestOrderStateMachine","test_order","",""
+"","7","test_illegal_cancel_after_paid","testcases","2026-08-11","passed","2026-08-11","TestOrderStateMachine","test_order","",""
+"核心断言是""绝不能返回 5xx""
+
+        注入类输入的正确表现是被参数校验或唯一约束拦下（4xx），
+        一旦出现 500 说明输入直达了底层，是明确的安全信号。
+        ","5","test_malicious_username_no_500[\u8f93\u5165_3]","testcases","2026-08-11","passed","2026-08-11","TestMaliciousInput","test_security","",""
+"","4","test_login[\u7528\u6237\u540d\u4e3a\u7a7a]","testcases","2026-08-11","passed","2026-08-11","TestLogin","test_login","",""
+"合法数据的用例会真的建出用户，因此给唯一字段加随机后缀并在断言后清理","37","test_create_validation[\u7528\u6237\u540d\u7b49\u4e8e32\u4f4d_\u4e0a\u8fb9\u754c]","testcases","2026-08-11","passed","2026-08-11","TestUserCrud","test_user_crud","",""
+"","37","test_token_invalid_after_logout","testcases","2026-08-11","passed","2026-08-11","TestLogin","test_login","",""
