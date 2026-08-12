@@ -1,0 +1,4 @@
+19:04:35 | INFO    | ┌── 开始 test_no_sensitive_field_in_list
+19:04:35 | INFO    | → GET http://127.0.0.1:8000/api/v1/users
+19:04:35 | INFO    | ← 200 4ms
+19:04:35 | INFO    | └── 结束 test_no_sensitive_field_in_list
