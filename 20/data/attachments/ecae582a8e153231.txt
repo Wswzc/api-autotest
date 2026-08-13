@@ -1,0 +1,10 @@
+19:04:55 | INFO    | ===== 运行环境：<Settings env=local base_url=http://127.0.0.1:8000> =====
+19:04:55 | INFO    | → POST http://127.0.0.1:8000/api/v1/login
+19:04:55 | INFO    | ← 200 3ms
+19:04:55 | INFO    | 主 账号登录成功，token 已缓存至会话级
+19:04:55 | INFO    | ┌── 开始 test_create_order[\u6570\u91cf\u4e0b\u8fb9\u754c1]
+19:04:55 | INFO    | → POST http://127.0.0.1:8000/api/v1/orders
+19:04:55 | INFO    | ← 201 3ms
+19:04:55 | INFO    | → POST http://127.0.0.1:8000/api/v1/orders/NO17866478950001/cancel
+19:04:55 | INFO    | ← 200 3ms
+19:04:55 | INFO    | └── 结束 test_create_order[\u6570\u91cf\u4e0b\u8fb9\u754c1]

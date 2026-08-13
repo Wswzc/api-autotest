@@ -1,0 +1,7 @@
+19:04:55 | INFO    | → POST http://127.0.0.1:8000/api/v1/login
+19:04:55 | INFO    | ← 200 5ms
+19:04:55 | INFO    | 主 账号登录成功，token 已缓存至会话级
+19:04:55 | INFO    | ┌── 开始 test_create_order[\u5546\u54c1\u4e0d\u5b58\u5728]
+19:04:55 | INFO    | → POST http://127.0.0.1:8000/api/v1/orders
+19:04:55 | INFO    | ← 404 4ms
+19:04:55 | INFO    | └── 结束 test_create_order[\u5546\u54c1\u4e0d\u5b58\u5728]
