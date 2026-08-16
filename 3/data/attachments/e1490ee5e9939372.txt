@@ -1,4 +1,0 @@
-15:01:28 | INFO    | ┌── 开始 test_protected_endpoints_require_auth[GET-/users]
-15:01:28 | INFO    | → GET http://127.0.0.1:8000/api/v1/users
-15:01:28 | INFO    | ← 401 4ms
-15:01:28 | INFO    | └── 结束 test_protected_endpoints_require_auth[GET-/users]

@@ -1,0 +1,4 @@
+18:31:44 | INFO    | ┌── 开始 test_protected_endpoints_require_auth[GET-/stock/SKU-001]
+18:31:44 | INFO    | → GET http://127.0.0.1:8000/api/v1/stock/SKU-001
+18:31:44 | INFO    | ← 401 4ms
+18:31:44 | INFO    | └── 结束 test_protected_endpoints_require_auth[GET-/stock/SKU-001]

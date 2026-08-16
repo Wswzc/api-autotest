@@ -1,0 +1,12 @@
+GET http://127.0.0.1:8000/api/v1/users
+请求头: {"User-Agent": "python-requests/2.32.3", "Accept-Encoding": "gzip, deflate", "Accept": "*/*", "Connection": "keep-alive", "Authorization": "Bearer ***"}
+查询参数: {'page': 1, 'size': 10}
+请求体: 无
+------------------------------------------------------------
+状态码: 401    耗时: 3ms
+响应体:
+{
+  "code": 4010,
+  "msg": "token 无效或已过期",
+  "data": null
+}
