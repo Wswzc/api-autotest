@@ -1,0 +1,4 @@
+18:41:46 | INFO    | ┌── 开始 test_path_injection_no_500[SQL\u6ce8\u5165]
+18:41:46 | INFO    | → GET http://127.0.0.1:8000/api/v1/users/1 OR 1=1
+18:41:46 | INFO    | ← 422 2ms
+18:41:46 | INFO    | └── 结束 test_path_injection_no_500[SQL\u6ce8\u5165]
