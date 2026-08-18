@@ -1,0 +1,8 @@
+18:40:52 | INFO    | ┌── 开始 test_duplicate_username
+18:40:52 | INFO    | → POST http://127.0.0.1:8000/api/v1/users
+18:40:52 | INFO    | ← 201 3ms
+18:40:52 | INFO    | → POST http://127.0.0.1:8000/api/v1/users
+18:40:52 | INFO    | ← 409 3ms
+18:40:52 | INFO    | → DELETE http://127.0.0.1:8000/api/v1/users/13
+18:40:52 | INFO    | ← 200 4ms
+18:40:52 | INFO    | └── 结束 test_duplicate_username

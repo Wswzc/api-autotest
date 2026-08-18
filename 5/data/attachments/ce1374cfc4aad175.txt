@@ -1,4 +1,0 @@
-02:53:12 | INFO    | ┌── 开始 test_protected_endpoints_require_auth[POST-/users]
-02:53:12 | INFO    | → POST http://127.0.0.1:8000/api/v1/users
-02:53:12 | INFO    | ← 401 1ms
-02:53:12 | INFO    | └── 结束 test_protected_endpoints_require_auth[POST-/users]

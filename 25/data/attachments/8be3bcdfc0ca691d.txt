@@ -1,0 +1,4 @@
+18:40:52 | INFO    | ┌── 开始 test_horizontal_privilege_write
+18:40:52 | INFO    | → PUT http://127.0.0.1:8000/api/v1/users/1
+18:40:52 | INFO    | ← 403 3ms
+18:40:52 | INFO    | └── 结束 test_horizontal_privilege_write

@@ -1,0 +1,10 @@
+18:40:52 | INFO    | ┌── 开始 test_update_user
+18:40:52 | INFO    | → POST http://127.0.0.1:8000/api/v1/users
+18:40:52 | INFO    | ← 201 4ms
+18:40:52 | INFO    | → PUT http://127.0.0.1:8000/api/v1/users/15
+18:40:52 | INFO    | ← 200 8ms
+18:40:52 | INFO    | → GET http://127.0.0.1:8000/api/v1/users/15
+18:40:52 | INFO    | ← 200 2ms
+18:40:52 | INFO    | → DELETE http://127.0.0.1:8000/api/v1/users/15
+18:40:52 | INFO    | ← 200 4ms
+18:40:52 | INFO    | └── 结束 test_update_user
