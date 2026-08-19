@@ -1,0 +1,10 @@
+18:38:05 | INFO    | ┌── 开始 test_vertical_privilege
+18:38:05 | INFO    | → POST http://127.0.0.1:8000/api/v1/users
+18:38:05 | INFO    | ← 201 2ms
+18:38:05 | INFO    | → DELETE http://127.0.0.1:8000/api/v1/users/3
+18:38:05 | INFO    | ← 403 3ms
+18:38:05 | INFO    | → GET http://127.0.0.1:8000/api/v1/users/3
+18:38:05 | INFO    | ← 200 2ms
+18:38:05 | INFO    | → DELETE http://127.0.0.1:8000/api/v1/users/3
+18:38:05 | INFO    | ← 200 6ms
+18:38:05 | INFO    | └── 结束 test_vertical_privilege

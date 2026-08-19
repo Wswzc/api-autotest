@@ -1,0 +1,28 @@
+POST http://127.0.0.1:8000/api/v1/users
+请求头: {"User-Agent": "python-requests/2.32.3", "Accept-Encoding": "gzip, deflate", "Accept": "*/*", "Connection": "keep-alive", "Authorization": "Bearer ***"}
+查询参数: None
+请求体: {
+  "username": "a",
+  "password": "Aa1LjZmMGohQ",
+  "email": "auto_1787164685705649@example.com",
+  "age": 49
+}
+------------------------------------------------------------
+状态码: 422    耗时: 7ms
+响应体:
+{
+  "detail": [
+    {
+      "type": "string_too_short",
+      "loc": [
+        "body",
+        "username"
+      ],
+      "msg": "String should have at least 3 characters",
+      "input": "a",
+      "ctx": {
+        "min_length": 3
+      }
+    }
+  ]
+}
