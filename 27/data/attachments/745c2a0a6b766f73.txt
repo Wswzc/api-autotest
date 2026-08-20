@@ -1,0 +1,4 @@
+18:42:04 | INFO    | ┌── 开始 test_create_validation[\u5e74\u9f84\u4f20\u5b57\u7b26\u4e32\u7c7b\u578b\u9519\u8bef]
+18:42:04 | INFO    | → POST http://127.0.0.1:8000/api/v1/users
+18:42:04 | INFO    | ← 422 2ms
+18:42:04 | INFO    | └── 结束 test_create_validation[\u5e74\u9f84\u4f20\u5b57\u7b26\u4e32\u7c7b\u578b\u9519\u8bef]

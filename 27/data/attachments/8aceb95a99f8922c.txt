@@ -1,0 +1,5 @@
+18:42:03 | INFO    | ===== 运行环境：<Settings env=local base_url=http://127.0.0.1:8000> =====
+18:42:03 | INFO    | ┌── 开始 test_login_response_schema
+18:42:03 | INFO    | → POST http://127.0.0.1:8000/api/v1/login
+18:42:03 | INFO    | ← 200 3ms
+18:42:03 | INFO    | └── 结束 test_login_response_schema

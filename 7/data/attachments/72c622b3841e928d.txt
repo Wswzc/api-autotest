@@ -1,4 +1,0 @@
-19:29:02 | INFO    | ┌── 开始 test_create_validation[\u7f3a\u5c11\u5fc5\u586b\u5b57\u6bb5email]
-19:29:02 | INFO    | → POST http://127.0.0.1:8000/api/v1/users
-19:29:02 | INFO    | ← 422 2ms
-19:29:02 | INFO    | └── 结束 test_create_validation[\u7f3a\u5c11\u5fc5\u586b\u5b57\u6bb5email]
