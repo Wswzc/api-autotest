@@ -1,8 +1,0 @@
-19:13:40 | INFO    | ┌── 开始 test_different_keys_create_different_orders
-19:13:40 | INFO    | → POST http://127.0.0.1:8000/api/v1/stock
-19:13:40 | INFO    | ← 200 3ms
-19:13:40 | INFO    | → POST http://127.0.0.1:8000/api/v1/orders
-19:13:40 | INFO    | ← 201 2ms
-19:13:40 | INFO    | → POST http://127.0.0.1:8000/api/v1/orders
-19:13:40 | INFO    | ← 201 2ms
-19:13:40 | INFO    | └── 结束 test_different_keys_create_different_orders
