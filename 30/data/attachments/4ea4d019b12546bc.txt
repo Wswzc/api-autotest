@@ -1,0 +1,15 @@
+GET http://127.0.0.1:8000/api/v1/stock/SKU-AUTO-1787509932075267
+请求头: {"User-Agent": "python-requests/2.32.3", "Accept-Encoding": "gzip, deflate", "Accept": "*/*", "Connection": "keep-alive", "Authorization": "Bearer ***"}
+查询参数: None
+请求体: 无
+------------------------------------------------------------
+状态码: 200    耗时: 3ms
+响应体:
+{
+  "code": 0,
+  "msg": "success",
+  "data": {
+    "sku": "SKU-AUTO-1787509932075267",
+    "stock": 49
+  }
+}
