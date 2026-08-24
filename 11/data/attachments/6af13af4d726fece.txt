@@ -1,4 +1,0 @@
-19:40:07 | INFO    | ┌── 开始 test_login[\u7528\u6237\u540d\u4e3a\u7a7a]
-19:40:07 | INFO    | → POST http://127.0.0.1:8000/api/v1/login
-19:40:07 | INFO    | ← 400 2ms
-19:40:07 | INFO    | └── 结束 test_login[\u7528\u6237\u540d\u4e3a\u7a7a]
