@@ -1,5 +1,0 @@
-19:38:11 | INFO    | ===== 运行环境：<Settings env=local base_url=http://127.0.0.1:8000> =====
-19:38:11 | INFO    | ┌── 开始 test_login[\u6b63\u786e\u8d26\u53f7\u5bc6\u7801\u767b\u5f55\u6210\u529f]
-19:38:11 | INFO    | → POST http://127.0.0.1:8000/api/v1/login
-19:38:11 | INFO    | ← 200 3ms
-19:38:11 | INFO    | └── 结束 test_login[\u6b63\u786e\u8d26\u53f7\u5bc6\u7801\u767b\u5f55\u6210\u529f]
