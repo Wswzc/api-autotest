@@ -1,0 +1,4 @@
+19:50:58 | INFO    | ┌── 开始 test_path_injection_no_500[\u62fc\u63a5\u5220\u8868]
+19:50:58 | INFO    | → GET http://127.0.0.1:8000/api/v1/users/1;DROP TABLE users
+19:50:58 | INFO    | ← 422 4ms
+19:50:58 | INFO    | └── 结束 test_path_injection_no_500[\u62fc\u63a5\u5220\u8868]

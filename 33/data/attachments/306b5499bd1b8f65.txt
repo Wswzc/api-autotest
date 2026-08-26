@@ -1,0 +1,10 @@
+19:50:58 | INFO    | ┌── 开始 test_delete_user
+19:50:58 | INFO    | → POST http://127.0.0.1:8000/api/v1/users
+19:50:58 | INFO    | ← 201 2ms
+19:50:58 | INFO    | → DELETE http://127.0.0.1:8000/api/v1/users/17
+19:50:58 | INFO    | ← 200 3ms
+19:50:58 | INFO    | → GET http://127.0.0.1:8000/api/v1/users/17
+19:50:58 | INFO    | ← 404 2ms
+19:50:58 | INFO    | → DELETE http://127.0.0.1:8000/api/v1/users/17
+19:50:58 | INFO    | ← 404 2ms
+19:50:58 | INFO    | └── 结束 test_delete_user
