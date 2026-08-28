@@ -1,0 +1,4 @@
+02:05:27 | INFO    | ┌── 开始 test_create_validation[\u5bc6\u7801\u5c11\u4e8e8\u4f4d]
+02:05:27 | INFO    | → POST http://127.0.0.1:8000/api/v1/users
+02:05:27 | INFO    | ← 422 2ms
+02:05:27 | INFO    | └── 结束 test_create_validation[\u5bc6\u7801\u5c11\u4e8e8\u4f4d]

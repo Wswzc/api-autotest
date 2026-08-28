@@ -1,0 +1,4 @@
+02:05:27 | INFO    | ┌── 开始 test_path_injection_no_500[\u8def\u5f84\u7a7f\u8d8a]
+02:05:27 | INFO    | → GET http://127.0.0.1:8000/api/v1/users/../../admin
+02:05:27 | INFO    | ← 404 1ms
+02:05:27 | INFO    | └── 结束 test_path_injection_no_500[\u8def\u5f84\u7a7f\u8d8a]
