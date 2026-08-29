@@ -1,0 +1,4 @@
+20:35:12 | INFO    | ┌── 开始 test_create_order[\u6570\u91cf\u8d85\u8fc7\u4e0a\u965099]
+20:35:12 | INFO    | → POST http://127.0.0.1:8000/api/v1/orders
+20:35:12 | INFO    | ← 422 2ms
+20:35:12 | INFO    | └── 结束 test_create_order[\u6570\u91cf\u8d85\u8fc7\u4e0a\u965099]

@@ -1,0 +1,10 @@
+20:35:12 | INFO    | ┌── 开始 test_illegal_pay_twice
+20:35:12 | INFO    | → POST http://127.0.0.1:8000/api/v1/orders
+20:35:12 | INFO    | ← 201 2ms
+20:35:12 | INFO    | → POST http://127.0.0.1:8000/api/v1/orders/NO17880357120004/pay
+20:35:12 | INFO    | ← 200 4ms
+20:35:12 | INFO    | → POST http://127.0.0.1:8000/api/v1/orders/NO17880357120004/pay
+20:35:12 | INFO    | ← 409 2ms
+20:35:12 | INFO    | → GET http://127.0.0.1:8000/api/v1/orders/NO17880357120004
+20:35:12 | INFO    | ← 200 2ms
+20:35:12 | INFO    | └── 结束 test_illegal_pay_twice
