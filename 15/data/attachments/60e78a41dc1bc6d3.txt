@@ -1,4 +1,0 @@
-18:40:08 | INFO    | ┌── 开始 test_create_validation[\u90ae\u7bb1\u683c\u5f0f\u975e\u6cd5]
-18:40:08 | INFO    | → POST http://127.0.0.1:8000/api/v1/users
-18:40:08 | INFO    | ← 422 4ms
-18:40:08 | INFO    | └── 结束 test_create_validation[\u90ae\u7bb1\u683c\u5f0f\u975e\u6cd5]

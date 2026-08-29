@@ -1,4 +1,0 @@
-18:40:08 | INFO    | ┌── 开始 test_get_nonexistent_user
-18:40:08 | INFO    | → GET http://127.0.0.1:8000/api/v1/users/99999999
-18:40:08 | INFO    | ← 404 5ms
-18:40:08 | INFO    | └── 结束 test_get_nonexistent_user

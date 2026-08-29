@@ -1,8 +1,0 @@
-18:40:08 | INFO    | ┌── 开始 test_malicious_username_no_500[\u8f93\u5165_4]
-18:40:08 | INFO    | → POST http://127.0.0.1:8000/api/v1/users
-18:40:08 | INFO    | ← 201 3ms
-18:40:08 | INFO    | → GET http://127.0.0.1:8000/api/v1/users/3
-18:40:08 | INFO    | ← 200 2ms
-18:40:08 | INFO    | → DELETE http://127.0.0.1:8000/api/v1/users/3
-18:40:08 | INFO    | ← 200 5ms
-18:40:08 | INFO    | └── 结束 test_malicious_username_no_500[\u8f93\u5165_4]

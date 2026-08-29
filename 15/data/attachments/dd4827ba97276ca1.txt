@@ -1,4 +1,0 @@
-18:40:08 | INFO    | ┌── 开始 test_path_injection_no_500[\u7a7a\u5b57\u8282]
-18:40:08 | INFO    | → GET http://127.0.0.1:8000/api/v1/users/%00
-18:40:08 | INFO    | ← 422 3ms
-18:40:08 | INFO    | └── 结束 test_path_injection_no_500[\u7a7a\u5b57\u8282]

@@ -1,4 +1,0 @@
-18:40:08 | INFO    | ┌── 开始 test_invalid_token_rejected[\u9519\u8bef\u8ba4\u8bc1\u65b9\u6848]
-18:40:08 | INFO    | → GET http://127.0.0.1:8000/api/v1/users
-18:40:08 | INFO    | ← 401 2ms
-18:40:08 | INFO    | └── 结束 test_invalid_token_rejected[\u9519\u8bef\u8ba4\u8bc1\u65b9\u6848]
