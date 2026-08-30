@@ -1,0 +1,10 @@
+20:43:30 | INFO    | ┌── 开始 test_illegal_cancel_after_paid
+20:43:30 | INFO    | → POST http://127.0.0.1:8000/api/v1/orders
+20:43:30 | INFO    | ← 201 2ms
+20:43:30 | INFO    | → POST http://127.0.0.1:8000/api/v1/orders/NO17881226100006/pay
+20:43:30 | INFO    | ← 200 3ms
+20:43:30 | INFO    | → POST http://127.0.0.1:8000/api/v1/orders/NO17881226100006/cancel
+20:43:30 | INFO    | ← 409 2ms
+20:43:30 | INFO    | → GET http://127.0.0.1:8000/api/v1/orders/NO17881226100006
+20:43:30 | INFO    | ← 200 2ms
+20:43:30 | INFO    | └── 结束 test_illegal_cancel_after_paid
