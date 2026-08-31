@@ -1,0 +1,4 @@
+22:37:09 | INFO    | ┌── 开始 test_invalid_token_rejected[\u7a7atoken]
+22:37:09 | INFO    | → GET http://127.0.0.1:8000/api/v1/users
+22:37:09 | INFO    | ← 401 3ms
+22:37:09 | INFO    | └── 结束 test_invalid_token_rejected[\u7a7atoken]
