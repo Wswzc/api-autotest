@@ -1,4 +1,0 @@
-19:04:34 | INFO    | ┌── 开始 test_login[XSS\u811a\u672c\u4f5c\u4e3a\u7528\u6237\u540d\u4e0d\u5e94\u901a\u8fc7]
-19:04:34 | INFO    | → POST http://127.0.0.1:8000/api/v1/login
-19:04:34 | INFO    | ← 401 4ms
-19:04:34 | INFO    | └── 结束 test_login[XSS\u811a\u672c\u4f5c\u4e3a\u7528\u6237\u540d\u4e0d\u5e94\u901a\u8fc7]
