@@ -1,0 +1,21 @@
+GET http://127.0.0.1:8000/api/v1/orders/NO17883816900010
+请求头: {"User-Agent": "python-requests/2.32.3", "Accept-Encoding": "gzip, deflate", "Accept": "*/*", "Connection": "keep-alive", "Authorization": "Bearer ***"}
+查询参数: None
+请求体: 无
+------------------------------------------------------------
+状态码: 200    耗时: 2ms
+响应体:
+{
+  "code": 0,
+  "msg": "success",
+  "data": {
+    "order_no": "NO17883816900010",
+    "user_id": 1,
+    "sku": "SKU-001",
+    "quantity": 1,
+    "unit_price": 19.99,
+    "amount": 19.99,
+    "status": "finished",
+    "created_at": 1788381690
+  }
+}

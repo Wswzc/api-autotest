@@ -1,8 +1,0 @@
-19:04:56 | INFO    | ┌── 开始 test_create_then_query
-19:04:56 | INFO    | → POST http://127.0.0.1:8000/api/v1/users
-19:04:56 | INFO    | ← 201 3ms
-19:04:56 | INFO    | → GET http://127.0.0.1:8000/api/v1/users/6
-19:04:56 | INFO    | ← 200 7ms
-19:04:56 | INFO    | → DELETE http://127.0.0.1:8000/api/v1/users/6
-19:04:56 | INFO    | ← 200 3ms
-19:04:56 | INFO    | └── 结束 test_create_then_query

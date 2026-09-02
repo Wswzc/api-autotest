@@ -1,4 +1,0 @@
-19:04:55 | INFO    | ┌── 开始 test_protected_endpoints_require_auth[POST-/orders]
-19:04:55 | INFO    | → POST http://127.0.0.1:8000/api/v1/orders
-19:04:55 | INFO    | ← 401 3ms
-19:04:55 | INFO    | └── 结束 test_protected_endpoints_require_auth[POST-/orders]

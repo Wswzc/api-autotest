@@ -1,0 +1,6 @@
+20:41:30 | INFO    | ┌── 开始 test_create_validation[\u7528\u6237\u540d\u7b49\u4e8e3\u4f4d_\u4e0b\u8fb9\u754c]
+20:41:30 | INFO    | → POST http://127.0.0.1:8000/api/v1/users
+20:41:30 | INFO    | ← 201 2ms
+20:41:30 | INFO    | → DELETE http://127.0.0.1:8000/api/v1/users/9
+20:41:30 | INFO    | ← 200 2ms
+20:41:30 | INFO    | └── 结束 test_create_validation[\u7528\u6237\u540d\u7b49\u4e8e3\u4f4d_\u4e0b\u8fb9\u754c]
