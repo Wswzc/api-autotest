@@ -1,0 +1,4 @@
+20:40:21 | INFO    | ┌── 开始 test_pagination_boundary[\u9875\u7801\u4e3a\u8d1f\u975e\u6cd5]
+20:40:21 | INFO    | → GET http://127.0.0.1:8000/api/v1/users
+20:40:21 | INFO    | ← 422 5ms
+20:40:21 | INFO    | └── 结束 test_pagination_boundary[\u9875\u7801\u4e3a\u8d1f\u975e\u6cd5]
