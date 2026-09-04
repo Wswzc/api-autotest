@@ -1,0 +1,4 @@
+20:26:38 | INFO    | ┌── 开始 test_login_no_password_leak
+20:26:38 | INFO    | → POST http://127.0.0.1:8000/api/v1/login
+20:26:38 | INFO    | ← 200 2ms
+20:26:38 | INFO    | └── 结束 test_login_no_password_leak

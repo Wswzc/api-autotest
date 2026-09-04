@@ -1,0 +1,4 @@
+20:26:39 | INFO    | ┌── 开始 test_get_user_with_invalid_id_type
+20:26:39 | INFO    | → GET http://127.0.0.1:8000/api/v1/users/abc
+20:26:39 | INFO    | ← 422 2ms
+20:26:39 | INFO    | └── 结束 test_get_user_with_invalid_id_type
