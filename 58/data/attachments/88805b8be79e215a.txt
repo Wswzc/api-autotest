@@ -1,0 +1,27 @@
+POST http://127.0.0.1:8000/api/v1/users
+请求头: {"User-Agent": "python-requests/2.32.3", "Accept-Encoding": "gzip, deflate", "Accept": "*/*", "Connection": "keep-alive", "Authorization": "Bearer ***"}
+查询参数: None
+请求体: {
+  "username": "pwd_long",
+  "password": "Passw0rd123456789",
+  "email": "a6@example.com"
+}
+------------------------------------------------------------
+状态码: 422    耗时: 4ms
+响应体:
+{
+  "detail": [
+    {
+      "type": "string_too_long",
+      "loc": [
+        "body",
+        "password"
+      ],
+      "msg": "String should have at most 16 characters",
+      "input": "Passw0rd123456789",
+      "ctx": {
+        "max_length": 16
+      }
+    }
+  ]
+}
