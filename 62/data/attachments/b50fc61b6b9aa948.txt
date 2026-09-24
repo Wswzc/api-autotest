@@ -1,0 +1,15 @@
+POST http://127.0.0.1:8000/api/v1/login
+请求头: {"User-Agent": "python-requests/2.32.3", "Accept-Encoding": "gzip, deflate", "Accept": "*/*", "Connection": "keep-alive"}
+查询参数: None
+请求体: {
+  "username": "   ",
+  "password": "123456"
+}
+------------------------------------------------------------
+状态码: 400    耗时: 3ms
+响应体:
+{
+  "code": 1002,
+  "msg": "用户名不能为空",
+  "data": null
+}
