@@ -1,0 +1,12 @@
+23:01:44 | INFO    | ┌── 开始 test_same_key_creates_single_order
+23:01:44 | INFO    | → POST http://127.0.0.1:8000/api/v1/stock
+23:01:44 | INFO    | ← 200 2ms
+23:01:44 | INFO    | → GET http://127.0.0.1:8000/api/v1/stock/SKU-AUTO-1790636504952641
+23:01:44 | INFO    | ← 200 2ms
+23:01:44 | INFO    | → POST http://127.0.0.1:8000/api/v1/orders
+23:01:44 | INFO    | ← 201 2ms
+23:01:45 | INFO    | → POST http://127.0.0.1:8000/api/v1/orders
+23:01:45 | INFO    | ← 201 5ms
+23:01:45 | INFO    | → GET http://127.0.0.1:8000/api/v1/stock/SKU-AUTO-1790636504952641
+23:01:45 | INFO    | ← 200 2ms
+23:01:45 | INFO    | └── 结束 test_same_key_creates_single_order

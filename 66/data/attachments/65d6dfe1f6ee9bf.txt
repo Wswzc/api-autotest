@@ -1,0 +1,4 @@
+23:01:44 | INFO    | ┌── 开始 test_create_order_requires_auth
+23:01:44 | INFO    | → POST http://127.0.0.1:8000/api/v1/orders
+23:01:44 | INFO    | ← 401 2ms
+23:01:44 | INFO    | └── 结束 test_create_order_requires_auth

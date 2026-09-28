@@ -1,0 +1,6 @@
+23:01:44 | INFO    | ┌── 开始 test_create_order[\u6b63\u5e38\u4e0b\u5355\u591a\u4ef6\u91d1\u989d\u9700\u6b63\u786e\u7d2f\u8ba1]
+23:01:44 | INFO    | → POST http://127.0.0.1:8000/api/v1/orders
+23:01:44 | INFO    | ← 201 2ms
+23:01:44 | INFO    | → POST http://127.0.0.1:8000/api/v1/orders/NO17906365040012/cancel
+23:01:44 | INFO    | ← 200 5ms
+23:01:44 | INFO    | └── 结束 test_create_order[\u6b63\u5e38\u4e0b\u5355\u591a\u4ef6\u91d1\u989d\u9700\u6b63\u786e\u7d2f\u8ba1]
