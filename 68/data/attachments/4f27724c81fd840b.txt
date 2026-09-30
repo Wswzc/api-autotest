@@ -1,0 +1,6 @@
+21:59:03 | INFO    | ┌── 开始 test_operate_nonexistent_order
+21:59:03 | INFO    | → POST http://127.0.0.1:8000/api/v1/orders/NO_NOT_EXIST_123/pay
+21:59:03 | INFO    | ← 404 1ms
+21:59:03 | INFO    | → GET http://127.0.0.1:8000/api/v1/orders/NO_NOT_EXIST_123
+21:59:03 | INFO    | ← 404 1ms
+21:59:03 | INFO    | └── 结束 test_operate_nonexistent_order
