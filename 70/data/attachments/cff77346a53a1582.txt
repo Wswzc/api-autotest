@@ -1,0 +1,4 @@
+21:56:36 | INFO    | ┌── 开始 test_protected_endpoints_require_auth[DELETE-/users/1]
+21:56:36 | INFO    | → DELETE http://127.0.0.1:8000/api/v1/users/1
+21:56:36 | INFO    | ← 401 4ms
+21:56:36 | INFO    | └── 结束 test_protected_endpoints_require_auth[DELETE-/users/1]
