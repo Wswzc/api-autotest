@@ -1,0 +1,14 @@
+22:24:23 | INFO    | ┌── 开始 test_cannot_operate_others_order
+22:24:23 | INFO    | → POST http://127.0.0.1:8000/api/v1/orders
+22:24:23 | INFO    | ← 201 2ms
+22:24:24 | INFO    | → POST http://127.0.0.1:8000/api/v1/orders/NO17915846630014/pay
+22:24:24 | INFO    | ← 403 2ms
+22:24:24 | INFO    | → POST http://127.0.0.1:8000/api/v1/orders/NO17915846630014/cancel
+22:24:24 | INFO    | ← 403 2ms
+22:24:24 | INFO    | → GET http://127.0.0.1:8000/api/v1/orders/NO17915846630014
+22:24:24 | INFO    | ← 200 2ms
+22:24:24 | INFO    | → GET http://127.0.0.1:8000/api/v1/orders/NO17915846630014
+22:24:24 | INFO    | ← 200 4ms
+22:24:24 | INFO    | → POST http://127.0.0.1:8000/api/v1/orders/NO17915846630014/cancel
+22:24:24 | INFO    | ← 200 3ms
+22:24:24 | INFO    | └── 结束 test_cannot_operate_others_order

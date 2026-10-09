@@ -1,0 +1,11 @@
+22:24:23 | INFO    | → POST http://127.0.0.1:8000/api/v1/login
+22:24:23 | INFO    | ← 200 3ms
+22:24:23 | INFO    | 主 账号登录成功，token 已缓存至会话级
+22:24:23 | INFO    | ┌── 开始 test_legal_transition_cancel
+22:24:23 | INFO    | → POST http://127.0.0.1:8000/api/v1/orders
+22:24:23 | INFO    | ← 201 5ms
+22:24:23 | INFO    | → POST http://127.0.0.1:8000/api/v1/orders/NO17915846630002/cancel
+22:24:23 | INFO    | ← 200 2ms
+22:24:23 | INFO    | → GET http://127.0.0.1:8000/api/v1/orders/NO17915846630002
+22:24:23 | INFO    | ← 200 3ms
+22:24:23 | INFO    | └── 结束 test_legal_transition_cancel
