@@ -1,0 +1,27 @@
+POST http://127.0.0.1:8000/api/v1/users
+请求头: {"User-Agent": "python-requests/2.32.3", "Accept-Encoding": "gzip, deflate", "Accept": "*/*", "Connection": "keep-alive", "Authorization": "Bearer ***"}
+查询参数: None
+请求体: {
+  "username": "bad_email",
+  "password": "Passw0rd123",
+  "email": "not-an-email"
+}
+------------------------------------------------------------
+状态码: 422    耗时: 2ms
+响应体:
+{
+  "detail": [
+    {
+      "type": "value_error",
+      "loc": [
+        "body",
+        "email"
+      ],
+      "msg": "value is not a valid email address: An email address must have an @-sign.",
+      "input": "not-an-email",
+      "ctx": {
+        "reason": "An email address must have an @-sign."
+      }
+    }
+  ]
+}
