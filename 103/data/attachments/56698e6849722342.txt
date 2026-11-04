@@ -1,0 +1,7 @@
+23:20:40 | INFO    | → POST http://127.0.0.1:8000/api/v1/login
+23:20:40 | INFO    | ← 200 4ms
+23:20:40 | INFO    | 越权测试 账号登录成功，token 已缓存至会话级
+23:20:40 | INFO    | ┌── 开始 test_horizontal_privilege_write
+23:20:40 | INFO    | → PUT http://127.0.0.1:8000/api/v1/users/1
+23:20:40 | INFO    | ← 403 3ms
+23:20:40 | INFO    | └── 结束 test_horizontal_privilege_write

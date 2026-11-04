@@ -1,0 +1,14 @@
+23:20:39 | INFO    | ┌── 开始 test_stock_deducted_after_order
+23:20:39 | INFO    | → POST http://127.0.0.1:8000/api/v1/stock
+23:20:39 | INFO    | ← 200 3ms
+23:20:39 | INFO    | → GET http://127.0.0.1:8000/api/v1/stock/SKU-AUTO-1793834439801434
+23:20:39 | INFO    | ← 200 2ms
+23:20:39 | INFO    | → POST http://127.0.0.1:8000/api/v1/orders
+23:20:39 | INFO    | ← 201 2ms
+23:20:39 | INFO    | → GET http://127.0.0.1:8000/api/v1/stock/SKU-AUTO-1793834439801434
+23:20:39 | INFO    | ← 200 3ms
+23:20:39 | INFO    | → POST http://127.0.0.1:8000/api/v1/orders/NO17938344390004/cancel
+23:20:39 | INFO    | ← 200 6ms
+23:20:39 | INFO    | → GET http://127.0.0.1:8000/api/v1/stock/SKU-AUTO-1793834439801434
+23:20:39 | INFO    | ← 200 2ms
+23:20:39 | INFO    | └── 结束 test_stock_deducted_after_order
