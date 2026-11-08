@@ -1,0 +1,28 @@
+POST http://127.0.0.1:8000/api/v1/users
+请求头: {"User-Agent": "python-requests/2.32.3", "Accept-Encoding": "gzip, deflate", "Accept": "*/*", "Connection": "keep-alive", "Authorization": "Bearer ***"}
+查询参数: None
+请求体: {
+  "username": "age_max",
+  "password": "Passw0rd123",
+  "email": "a9@example.com",
+  "age": 151
+}
+------------------------------------------------------------
+状态码: 422    耗时: 2ms
+响应体:
+{
+  "detail": [
+    {
+      "type": "less_than_equal",
+      "loc": [
+        "body",
+        "age"
+      ],
+      "msg": "Input should be less than or equal to 150",
+      "input": 151,
+      "ctx": {
+        "le": 150
+      }
+    }
+  ]
+}
