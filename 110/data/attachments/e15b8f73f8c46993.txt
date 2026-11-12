@@ -1,0 +1,26 @@
+POST http://127.0.0.1:8000/api/v1/users
+请求头: {"User-Agent": "python-requests/2.32.3", "Accept-Encoding": "gzip, deflate", "Accept": "*/*", "Connection": "keep-alive", "Authorization": "Bearer ***"}
+查询参数: None
+请求体: {
+  "username": "no_pwd",
+  "email": "a7@example.com"
+}
+------------------------------------------------------------
+状态码: 422    耗时: 1ms
+响应体:
+{
+  "detail": [
+    {
+      "type": "missing",
+      "loc": [
+        "body",
+        "password"
+      ],
+      "msg": "Field required",
+      "input": {
+        "username": "no_pwd",
+        "email": "a7@example.com"
+      }
+    }
+  ]
+}
