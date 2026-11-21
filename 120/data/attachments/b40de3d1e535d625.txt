@@ -1,0 +1,10 @@
+22:53:03 | INFO    | ┌── 开始 test_cannot_read_others_order
+22:53:03 | INFO    | → POST http://127.0.0.1:8000/api/v1/orders
+22:53:03 | INFO    | ← 201 3ms
+22:53:03 | INFO    | → GET http://127.0.0.1:8000/api/v1/orders/NO17953015830013
+22:53:03 | INFO    | ← 403 1ms
+22:53:03 | INFO    | → GET http://127.0.0.1:8000/api/v1/orders/NO17953015830013
+22:53:03 | INFO    | ← 200 5ms
+22:53:03 | INFO    | → POST http://127.0.0.1:8000/api/v1/orders/NO17953015830013/cancel
+22:53:03 | INFO    | ← 200 1ms
+22:53:03 | INFO    | └── 结束 test_cannot_read_others_order
